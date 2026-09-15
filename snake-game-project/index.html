@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>سانپ کا کھیل — Snake</title>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="stage">
+
+  <div class="hud">
+    <div class="brand">
+      <div class="title">سانپ کا کھیل</div>
+      <div class="sub">Snake · Arrow keys / WASD</div>
+    </div>
+    <div class="scores">
+      <div class="score-chip now">
+        <div class="label">اسکور</div>
+        <div class="value" id="scoreVal">0</div>
+      </div>
+      <div class="score-chip best">
+        <div class="label">بہترین</div>
+        <div class="value" id="bestVal">0</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="board-wrap">
+    <canvas id="game" width="560" height="560"></canvas>
+
+    <div class="overlay start show" id="startOverlay">
+      <div class="big">شروع کرنے کے لیے تیار؟</div>
+      <div class="desc">Arrow keys، WASD، یا نیچے دیے گئے بٹن استعمال کریں۔ کھانا کھائیں، بڑے ہوں، دیوار اور خود سے ٹکرانے سے بچیں۔</div>
+      <button class="cta" id="startBtn">کھیل شروع کریں</button>
+    </div>
+
+    <div class="overlay gameover" id="overOverlay">
+      <div class="big">گیم اوور</div>
+      <div class="final">آپ کا اسکور: <b id="finalScore">0</b></div>
+      <button class="cta" id="retryBtn">دوبارہ کھیلیں</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="hint">
+      <kbd>↑</kbd> <kbd>↓</kbd> <kbd>←</kbd> <kbd>→</kbd> یا <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> — <kbd>Space</kbd> روکیں/شروع
+    </div>
+    <button class="restart-btn" id="restartBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 12a9 9 0 1 1-2.64-6.36"/>
+        <path d="M21 3v6h-6"/>
+      </svg>
+      دوبارہ شروع
+    </button>
+  </div>
+
+  <div class="dpad" id="dpad">
+    <button class="up" data-dir="up">▲</button>
+    <button class="left" data-dir="left">◀</button>
+    <button class="down" data-dir="down">▼</button>
+    <button class="right" data-dir="right">▶</button>
+  </div>
+
+</div>
+
+<script src="js/game.js"></script>
+</body>
+</html>

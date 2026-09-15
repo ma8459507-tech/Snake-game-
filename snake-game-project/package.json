@@ -1,0 +1,11 @@
+{
+  "name": "urdu-snake-game",
+  "version": "1.0.0",
+  "description": "A modern, responsive Snake game (HTML/CSS/JS, Urdu UI) with keyboard, touch, and D-pad controls.",
+  "private": true,
+  "scripts": {
+    "start": "npx --yes http-server . -p 8080 -c-1",
+    "serve": "npx --yes http-server . -p 8080 -c-1"
+  },
+  "license": "UNLICENSED"
+}
